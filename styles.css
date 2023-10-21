@@ -54,6 +54,96 @@ body {
 .header-bar {
   background: var(--primary-color);
   grid-area: 1 / 2 / 2 / 3;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+  :focus {
+    border-color: #0366d6;
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.account strong {
+  font-weight: var(--heavy-weight);
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome strong,
+.welcome h3 {
+  font-weight: var(--heavy-weight);
+}
+
+.welcome h3 {
+  font-size: var(--h3-size);
+}
+
+.row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+  background: transparent;
+  color: #000000;
+  box-shadow: 0 0 0 3px #000000 inset;
+  :hover {
+    transform: translateY(-2px);
+  }
 }
 
 .content-grid {
@@ -77,15 +167,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-}
-
-@media (max-width: 900px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-  .primary-content-grid > div {
-    grid-template-columns: 1fr;
-  }
 }
 
 .primary-item {
@@ -156,4 +237,25 @@ body {
 
 .secondary-item > div > div:nth-child(n):not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row-1 {
+    margin-bottom: 5px;
+  }
+
+  .row-1,
+  .row-2 {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .primary-content-grid > div {
+    grid-template-columns: 1fr;
+  }
 }
