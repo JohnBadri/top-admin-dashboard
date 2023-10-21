@@ -1,31 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+:root {
+  --background-color: #f1f5f9;
+  --primary-color: #624bff;
+  --secondary-color: #212b36;
+  --font-family: "Montserrat", sans-serif;
+  --h2-size: 32px;
+  --h3-size: 24px;
+  --link-size: 20px;
+  --regular-weight: 400;
+  --medium-weight: 600;
+  --heavy-weight: 700;
+}
+
 body {
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template: minmax(200px, auto) 1fr / minmax(200px, 1fr) 3fr;
+  background: var(--background-color);
+  font-family: var(--font-family);
 }
 
 .sidebar-nav {
-  background: lightcoral;
+  background: var(--secondary-color);
   grid-area: 1 / 1 / 3 / 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.sidebar-nav li {
+  font-size: var(--link-size);
+  font-weight: var(--medium-weight);
+  color: var(--background-color);
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  font-size: var(--h2-size);
+  color: var(--background-color);
+  font-weight: var(--heavy-weight);
 }
 
 .header-bar {
-  background: lightblue;
+  background: var(--primary-color);
   grid-area: 1 / 2 / 2 / 3;
 }
 
 .content-grid {
-  background: lightgreen;
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template: 1fr / 3fr 1fr;
 }
 
 .primary-content-grid {
-  background: lightgoldenrodyellow;
+  border: 2px lightgoldenrodyellow solid;
 }
 
 .secondary-content-grid {
-  background: lightpink;
+  border: 2px lightsalmon solid;
 }
