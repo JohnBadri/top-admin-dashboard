@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: minmax(200px, auto) 1fr / minmax(200px, 1fr) 3fr;
+}
+
+.sidebar-nav {
+  background: lightcoral;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.header-bar {
+  background: lightblue;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.content-grid {
+  background: lightgreen;
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template: 1fr / 3fr 1fr;
+}
+
+.primary-content-grid {
+  background: lightgoldenrodyellow;
+}
+
+.secondary-content-grid {
+  background: lightpink;
+}
